@@ -27,7 +27,7 @@
           <router-link
             v-for="(item, index) in routesList"
             :key="item.title"
-            class="md:text-xl transform uppercase mx-[3%] hover:text-primary duration-200 p-3 bg-[#DDDDDD] mb-1 md:bg-transparent md:mb-0 min-w-[200px] md:min-w-0"
+            class="md:text-xl transform uppercase mx-[1%] hover:text-primary duration-200 p-3 bg-[#DDDDDD] mb-1 md:bg-transparent md:mb-0 min-w-[200px] md:min-w-0"
             :class="
               showMobile
                 ? 'scale-100 pointer-events-auto'
@@ -65,19 +65,23 @@ export default {
       showMobile: false,
       routesList: [
         {
-          title: "Home",
+          title: "S H O P",
           link: "/",
         },
         {
-          title: "About",
+          title: "D I S C O V E R",
           link: "/about",
         },
         {
-          title: "SHOP",
+          title: "C U S T O M",
           link: "/",
         },
         {
-          title: "BOOKMARK",
+          title: "B O O K M A R K",
+          link: "/about",
+        },
+        {
+          title: "A B O U T",
           link: "/about",
         },
       ],
