@@ -1,0 +1,9 @@
+$hamburger-layer-color: #ef0097;
+$hamburger-active-layer-color: #ef0097;
+$hamburger-active-hover-opacity: 1;
+$hamburger-layer-height: 3px;
+$hamburger-layer-width: 28px;
+$hamburger-layer-border-radius: 0;
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "./fonts.css";
+@import "./tailwind.css";
