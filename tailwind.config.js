@@ -17,6 +17,7 @@ module.exports = {
   variants: {
     extend: {
       minWidth: ["responsive"],
+      maxWidth: ["responsive"],
     },
   },
   corePlugins: {

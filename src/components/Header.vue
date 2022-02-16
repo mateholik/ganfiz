@@ -22,6 +22,7 @@
           </div>
         </div>
         <nav
+          v-if="!isMobile"
           id="navigation"
           class="absolute bottom-0 transform translate-y-full md:transform-none left-0 z-20 md:static w-full menuBreak:w-8/12"
           :class="
