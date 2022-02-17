@@ -29,7 +29,9 @@
       <h1 class="text-[40px] md:text-8xl mb-4 md:mb-6 text-center">
         HOW WE DELIVER
       </h1>
-      <p class="text-base md:text-xl text-justify md:text-center mb-4 md:mb-8">
+      <p
+        class="text-base md:text-xl text-justify md:text-center mb-4 md:mb-8 max-w-4xl mx-auto"
+      >
         We build impactful UX design and branding for product-led companies
         around the world. Using the industry-proven methods Jobs to be Done and
         Design Sprints, we’ve developed a highly optimised process that brings
