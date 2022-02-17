@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-8 md:mb-14">
+  <section class="mb-8 md:mb-20">
     <div class="container">
       <h1
         class="text-[40px] md:text-8xl font-semibold mb-6 md:mb-10 text-center"
@@ -38,14 +38,14 @@
       </p>
       <div class="mb-10 md:mb-14">
         <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="md:w-1/2 md:mr-[8%] mb-4 md:mb-0">
+          <div class="w-full md:w-1/2 md:mr-[8%] mb-4 md:mb-0">
             <img
               class="mx-auto px-12 md:px-0"
               src="/img/illustration-11.jpg"
               alt="illustration"
             />
           </div>
-          <div class="md:w-1/2">
+          <div class="w-full md:w-1/2">
             <Button class="mx-auto">LANDING PAGES</Button>
           </div>
         </div>
@@ -54,10 +54,10 @@
         <div
           class="flex flex-col-reverse md:flex-row items-center justify-between"
         >
-          <div class="md:w-1/2 md:mr-[8%] mt-4 md:mt-0">
+          <div class="w-full md:w-1/2 md:mr-[8%] mt-4 md:mt-0">
             <Button class="mx-auto" theme="dark">E-COMMERCE</Button>
           </div>
-          <div class="md:w-1/2">
+          <div class="w-full md:w-1/2">
             <img
               class="mx-auto px-12 md:px-0"
               src="/img/illustration-12.jpg"
@@ -68,14 +68,14 @@
       </div>
       <div class="mb-10 md:mb-14">
         <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="md:w-1/2 md:mr-[8%] mb-4 md:mb-0">
+          <div class="w-full md:w-1/2 md:mr-[8%] mb-4 md:mb-0">
             <img
               class="mx-auto px-12 md:px-0"
               src="/img/illustration-13.jpg"
               alt="illustration"
             />
           </div>
-          <div class="md:w-1/2">
+          <div class="w-full md:w-1/2">
             <Button class="mx-auto">E-LEARNING</Button>
           </div>
         </div>
@@ -84,10 +84,10 @@
         <div
           class="flex flex-col-reverse md:flex-row items-center justify-between"
         >
-          <div class="md:w-1/2 md:mr-[8%] mt-4 md:mt-0">
+          <div class="w-full md:w-1/2 md:mr-[8%] mt-4 md:mt-0">
             <Button class="mx-auto" theme="dark">CRM</Button>
           </div>
-          <div class="md:w-1/2">
+          <div class="w-full md:w-1/2">
             <img
               class="mx-auto px-12 md:px-0"
               src="/img/illustration-14.jpg"
@@ -98,14 +98,14 @@
       </div>
       <div class="mb-10 md:mb-14">
         <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="md:w-1/2 md:mr-[8%] mb-4 md:mb-0">
+          <div class="w-full md:w-1/2 md:mr-[8%] mb-4 md:mb-0">
             <img
               class="mx-auto px-12 md:px-0"
               src="/img/illustration-15.jpg"
               alt="illustration"
             />
           </div>
-          <div class="md:w-1/2">
+          <div class="w-full md:w-1/2">
             <Button class="mx-auto">E-AUCTION</Button>
           </div>
         </div>

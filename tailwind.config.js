@@ -30,7 +30,7 @@ module.exports = {
           maxWidth: "100%",
           padding: "0 1rem",
           margin: "0 auto",
-          maxWidth: "1200px",
+          maxWidth: "1240px",
         },
       });
     },
