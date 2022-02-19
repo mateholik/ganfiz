@@ -46,7 +46,7 @@
             />
           </div>
           <div class="w-full md:w-1/2">
-            <Button class="mx-auto">LANDING PAGES</Button>
+            <ButtonComponent class="mx-auto">LANDING PAGES</ButtonComponent>
           </div>
         </div>
       </div>
@@ -55,7 +55,9 @@
           class="flex flex-col-reverse md:flex-row items-center justify-between"
         >
           <div class="w-full md:w-1/2 md:mr-[8%] mt-4 md:mt-0">
-            <Button class="mx-auto" theme="dark">E-COMMERCE</Button>
+            <ButtonComponent class="mx-auto" theme="dark"
+              >E-COMMERCE</ButtonComponent
+            >
           </div>
           <div class="w-full md:w-1/2">
             <img
@@ -76,7 +78,7 @@
             />
           </div>
           <div class="w-full md:w-1/2">
-            <Button class="mx-auto">E-LEARNING</Button>
+            <ButtonComponent class="mx-auto">E-LEARNING</ButtonComponent>
           </div>
         </div>
       </div>
@@ -85,7 +87,7 @@
           class="flex flex-col-reverse md:flex-row items-center justify-between"
         >
           <div class="w-full md:w-1/2 md:mr-[8%] mt-4 md:mt-0">
-            <Button class="mx-auto" theme="dark">CRM</Button>
+            <ButtonComponent class="mx-auto" theme="dark">CRM</ButtonComponent>
           </div>
           <div class="w-full md:w-1/2">
             <img
@@ -106,7 +108,7 @@
             />
           </div>
           <div class="w-full md:w-1/2">
-            <Button class="mx-auto">E-AUCTION</Button>
+            <ButtonComponent class="mx-auto">E-AUCTION</ButtonComponent>
           </div>
         </div>
       </div>
@@ -115,11 +117,11 @@
 </template>
 
 <script>
-import Button from "@/components/Button.vue";
+import ButtonComponent from "@/components/ButtonComponent.vue";
 export default {
   name: "Experience",
   components: {
-    Button,
+    ButtonComponent,
   },
   data() {
     return {

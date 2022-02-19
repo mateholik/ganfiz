@@ -1,0 +1,38 @@
+$hamburger-layer-color: #94a7bc;
+$hamburger-active-layer-color: #94a7bc;
+$hamburger-active-hover-opacity: 1;
+$hamburger-layer-height: 3px;
+$hamburger-layer-width: 28px;
+$hamburger-layer-border-radius: 0;
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
+
+.transparent-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ef0097;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
+  transform: scale(0);
+  opacity: 0;
+}
+.fade-leave-active {
+  position: absolute;
+}

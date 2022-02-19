@@ -16,10 +16,12 @@
         </span>
       </h1>
       <div class="md:grid grid-cols-2 gap-10 max-w-2xl mx-auto mb-4 md:mb-8">
-        <Button class="mx-auto mb-4 md:mb-0" theme="dark">WEB PUSLAPIS</Button>
-        <Button class="mx-auto mb-4 md:mb-0">E-SHOP</Button>
-        <Button class="mx-auto mb-4 md:mb-0">CALL ME</Button>
-        <Button class="mx-auto">CUSTOM-MADE</Button>
+        <ButtonComponent class="mx-auto mb-4 md:mb-0" theme="dark"
+          >WEB PUSLAPIS</ButtonComponent
+        >
+        <ButtonComponent class="mx-auto mb-4 md:mb-0">E-SHOP</ButtonComponent>
+        <ButtonComponent class="mx-auto mb-4 md:mb-0">CALL ME</ButtonComponent>
+        <ButtonComponent class="mx-auto">CUSTOM-MADE</ButtonComponent>
       </div>
       <p class="text-base md:text-xl text-center">Avg response time: 54min</p>
     </div>
@@ -47,7 +49,9 @@
           <p class="text-center mb-4 md:mb-6 text-xl md:text-2xl font-medium">
             PRODUCTS
           </p>
-          <Button theme="dark" class="mx-auto">EXPLORE SPRINT</Button>
+          <ButtonComponent theme="dark" class="mx-auto"
+            >EXPLORE SPRINT</ButtonComponent
+          >
         </div>
         <div class="md:w-1/2">
           <img
@@ -58,7 +62,9 @@
           <p class="text-center mb-4 md:mb-6 text-xl md:text-2xl font-medium">
             BRANDING
           </p>
-          <Button theme="dark" class="mx-auto">EXPLORE SPRINT</Button>
+          <ButtonComponent theme="dark" class="mx-auto"
+            >EXPLORE SPRINT</ButtonComponent
+          >
         </div>
       </div>
     </div>
@@ -66,11 +72,11 @@
 </template>
 
 <script>
-import Button from "@/components/Button.vue";
+import ButtonComponent from "@/components/ButtonComponent.vue";
 export default {
   name: "Home",
   components: {
-    Button,
+    ButtonComponent,
   },
 };
 </script>

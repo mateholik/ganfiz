@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+// import Home from "../views/Home.vue";
 
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
+  // {
+  //   path: "/",
+  //   name: "Home",
+  //   component: Home,
+  // },
   {
     path: "/about",
     name: "About",
@@ -17,25 +17,43 @@ const routes = [
     path: "/products-&-brands",
     name: "Products & Brands",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ProductsBrands.vue"),
+      import(
+        /* webpackChunkName: "products-&-brands" */ "../views/ProductsBrands.vue"
+      ),
   },
   {
     path: "/experience",
     name: "Experience",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Experience.vue"),
+      import(/* webpackChunkName: "experience" */ "../views/Experience.vue"),
   },
   {
     path: "/landing-pages",
     name: "Landing Pages",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/LandingPages.vue"),
+      import(
+        /* webpackChunkName: "landing-pages" */ "../views/LandingPages.vue"
+      ),
   },
   {
     path: "/landing-pages-2",
     name: "Landing Pages 2",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/LandingPages2.vue"),
+      import(
+        /* webpackChunkName: "landing-pages-2" */ "../views/LandingPages2.vue"
+      ),
+  },
+  {
+    path: "/contact-us",
+    name: "Contact Us",
+    component: () =>
+      import(/* webpackChunkName: "contact-us" */ "../views/ContactUs.vue"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () =>
+      import(/* webpackChunkName: "contact-us" */ "../views/Login.vue"),
   },
 ];
 
