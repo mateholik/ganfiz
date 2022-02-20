@@ -1,7 +1,7 @@
 <template>
   <div class="mb-6 md:mb-10">
     <label
-      class="text-primary text-lg md:text-[22px] text-center uppercase block"
+      class="text-primary text-lg md:text-xl font-medium text-center uppercase block tracking-widest"
       :for="label"
       >{{ label }}</label
     >

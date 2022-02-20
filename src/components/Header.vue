@@ -35,7 +35,7 @@
             <router-link
               v-for="(item, index) in routes"
               :key="item.name"
-              class="whitespace-nowrap md:text-xl transform uppercase mx-[1%] hover:text-primary duration-200 p-3 bg-[#DDDDDD] mb-1 md:bg-transparent md:mb-0 min-w-[200px] md:min-w-0 text-center"
+              class="tracking-widest whitespace-nowrap md:text-xl transform uppercase mx-[1%] hover:text-primary duration-200 p-3 bg-[#DDDDDD] mb-1 md:bg-transparent md:mb-0 min-w-[200px] md:min-w-0 text-center"
               :class="
                 showMobile
                   ? 'scale-100 pointer-events-auto'

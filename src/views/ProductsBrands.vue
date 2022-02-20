@@ -1,9 +1,9 @@
 <template>
   <section class="mb-8 md:mb-14">
     <div class="container">
-      <p class="text-center text-base md:text-2xl mb-6 md:mb-16">
+      <!-- <p class="text-center text-base md:text-2xl mb-6 md:mb-16">
         Working with startups & scaleups to design growth-driven
-      </p>
+      </p> -->
       <h1 class="text-5xl md:text-8xl text-center mb-4">
         <span class="block font-semibold">PRODUCTS</span>
         <span

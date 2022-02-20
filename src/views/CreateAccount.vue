@@ -4,7 +4,7 @@
       <h1
         class="text-[40px] md:text-8xl font-semibold mb-6 md:mb-10 text-center uppercase"
       >
-        Login
+        Create Account
       </h1>
       <transition name="fade">
         <form
@@ -12,6 +12,18 @@
           class="max-w-3xl mx-auto"
           @submit.prevent="submitForm"
         >
+          <InputComponent
+            type="text"
+            label="FIRST NAME"
+            v-model="v$.form.firstName.$model"
+            :validator="v$.form.firstName"
+          />
+          <InputComponent
+            type="text"
+            label="LAST NAME"
+            v-model="v$.form.lastName.$model"
+            :validator="v$.form.lastName"
+          />
           <InputComponent
             type="email"
             label="EMAIL"
@@ -46,7 +58,7 @@ import ButtonComponent from "@/components/ButtonComponent.vue";
 import InputComponent from "@/components/InputComponent.vue";
 import LoaderComponent from "@/components/LoaderComponent.vue";
 export default {
-  name: "Login",
+  name: "CreateAccount",
   components: {
     ButtonComponent,
     InputComponent,
@@ -62,6 +74,8 @@ export default {
       showPassword: false,
       passwordInputType: "password",
       form: {
+        firstName: "",
+        lastNAme: "",
         email: "",
         password: "",
       },
@@ -77,6 +91,8 @@ export default {
   validations() {
     return {
       form: {
+        firstName: { required },
+        lastName: { required },
         email: { required, email },
         password: { required },
       },

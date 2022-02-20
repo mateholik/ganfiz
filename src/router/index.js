@@ -55,6 +55,32 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "contact-us" */ "../views/Login.vue"),
   },
+  {
+    path: "/create-account",
+    name: "Create Account",
+    component: () =>
+      import(/* webpackChunkName: "contact-us" */ "../views/CreateAccount.vue"),
+  },
+  {
+    path: "/forgot-password",
+    name: "Forgot password",
+    component: () =>
+      import(
+        /* webpackChunkName: "contact-us" */ "../views/ForgotPassword.vue"
+      ),
+  },
+  {
+    path: "/unauthorised",
+    name: "Unauthorised",
+    component: () =>
+      import(/* webpackChunkName: "contact-us" */ "../views/Unauthorised.vue"),
+  },
+  {
+    path: "/error",
+    name: "Error",
+    component: () =>
+      import(/* webpackChunkName: "contact-us" */ "../views/Error.vue"),
+  },
 ];
 
 const router = createRouter({
