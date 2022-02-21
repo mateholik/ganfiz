@@ -31,12 +31,10 @@
             :validator="v$.form.email"
           />
           <InputComponent
-            :type="passwordInputType"
-            :password="true"
+            type="password"
             label="password"
             v-model="v$.form.password.$model"
             :validator="v$.form.password"
-            @passwordVisibility="showPassword = !showPassword"
           />
           <ButtonComponent as="button" class="mx-auto" type="submit"
             ><span v-if="!loading">SIGN IN</span>
@@ -71,8 +69,6 @@ export default {
   },
   data() {
     return {
-      showPassword: false,
-      passwordInputType: "password",
       form: {
         firstName: "",
         lastNAme: "",
@@ -83,11 +79,7 @@ export default {
       isMessageSent: false,
     };
   },
-  watch: {
-    showPassword: function (val) {
-      this.passwordInputType = val === true ? "text" : "password";
-    },
-  },
+
   validations() {
     return {
       form: {

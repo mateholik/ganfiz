@@ -13,11 +13,17 @@
         alt="error"
       />
       <img
-        v-if="password && validator.$errors.length < 1"
+        v-if="this.type === 'password' && validator.$errors.length < 1"
         src="/img/eye.svg"
         class="absolute bottom-1/2 transform translate-y-1/2 left-0 w-6 md:w-10 h-auto cursor-pointer"
         alt="show password"
-        @click="$emit('passwordVisibility')"
+        @click="showPassword = !showPassword"
+      />
+      <img
+        v-if="editIcon"
+        src="/img/edit.svg"
+        class="absolute bottom-1/2 transform translate-y-1/2 right-0 w-6 md:w-8 h-auto"
+        alt="edit"
       />
       <textarea
         v-if="type === 'textarea'"
@@ -32,7 +38,7 @@
         v-else
         class="outline-none py-2 px-12 text-base md:text-lg border-b border-gray-300 block w-full text-center"
         :id="label"
-        :type="type"
+        :type="inputType"
         :value="modelValue"
         @input="updateValue"
       />
@@ -51,6 +57,22 @@
 <script>
 export default {
   name: "InputComponent",
+  data() {
+    return {
+      showPassword: false,
+      passwordInputType: "password",
+    };
+  },
+  watch: {
+    showPassword: function (val) {
+      this.passwordInputType = val === true ? "text" : "password";
+    },
+  },
+  computed: {
+    inputType() {
+      return this.type === "password" ? this.passwordInputType : this.type;
+    },
+  },
   props: {
     modelValue: {
       type: [String, Number],
@@ -68,7 +90,7 @@ export default {
       type: [Object, undefined],
       default: undefined,
     },
-    password: {
+    editIcon: {
       type: Boolean,
       default: false,
     },
