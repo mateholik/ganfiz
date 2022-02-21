@@ -2,7 +2,9 @@
   <header class="mb-8 md:mb-14">
     <div class="container">
       <div class="h-20 md:h-28 flex justify-center mb-4">
-        <img class="h-full w-auto" src="/img/logo.svg" alt="logo" />
+        <router-link to="/">
+          <img class="h-full w-auto mx-auto" src="/img/logo.svg" alt="logo"
+        /></router-link>
       </div>
       <div class="relative flex items-center justify-between">
         <div class="w-1/3 menuBreak:w-2/12 md:hidden menuBreak:block"></div>
@@ -21,8 +23,7 @@
             </div>
           </div>
         </div>
-        <nav
-          v-if="!isMobile"
+        <!-- <nav
           id="navigation"
           class="absolute bottom-0 transform translate-y-full md:transform-none left-0 z-20 md:static w-full menuBreak:w-8/12"
           :class="
@@ -35,7 +36,34 @@
             <router-link
               v-for="(item, index) in routes"
               :key="item.name"
-              class="tracking-widest whitespace-nowrap md:text-xl transform uppercase mx-[1%] hover:text-primary duration-200 p-3 bg-[#DDDDDD] mb-1 md:bg-transparent md:mb-0 min-w-[200px] md:min-w-0 text-center"
+              class="tracking-widest whitespace-nowrap md:text-xl transform uppercase mx-[1%] hover:text-primary duration-200 p-3 bg-[#DDDDDD] mb-1 md:bg-transparent md:mb-0 min-w-[230px] md:min-w-0 text-center"
+              :class="
+                showMobile
+                  ? 'scale-100 pointer-events-auto'
+                  : 'scale-0 pointer-events-none md:opacity-100  md:pointer-events-auto md:scale-100'
+              "
+              :style="`transition-delay: ${40 * index}ms;`"
+              :to="item.path"
+              >{{ item.name }}</router-link
+            >
+          </div>
+        </nav> -->
+        <nav
+          id="navigation"
+          class="absolute bottom-0 transform translate-y-full md:transform-none left-0 z-20 md:static w-full menuBreak:w-8/12"
+          :class="
+            showMobile && isMobile
+              ? 'opacity-100'
+              : 'opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto'
+          "
+        >
+          <div
+            class="flex flex-col md:flex-row menuBreak:justify-center items-center flex-wrap bg-white -mx-4 pb-4 md:pb-0"
+          >
+            <router-link
+              v-for="(item, index) in routes"
+              :key="item.name"
+              class="tracking-widest whitespace-nowrap md:text-xl transform uppercase mx-[1%] hover:text-primary duration-200 p-3 bg-[#DDDDDD] mb-1 md:bg-transparent md:mb-0 min-w-[230px] md:min-w-0 text-center"
               :class="
                 showMobile
                   ? 'scale-100 pointer-events-auto'
@@ -80,6 +108,11 @@ export default {
         path: route.path,
       });
     });
+  },
+  watch: {
+    $route() {
+      this.showMobile = false;
+    },
   },
   computed: {
     isMobile() {
